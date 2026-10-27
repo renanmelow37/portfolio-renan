@@ -6,11 +6,13 @@
 <title>Renan Melo | Procurement & Supply Chain</title>
 
 <style>
+
 :root{
 --primary:#2563eb;
 --secondary:#0f172a;
---bg:#f8fafc;
+--light:#f8fafc;
 --text:#334155;
+--white:#ffffff;
 }
 
 *{
@@ -25,7 +27,7 @@ scroll-behavior:smooth;
 }
 
 body{
-background:var(--bg);
+background:var(--light);
 color:var(--text);
 }
 
@@ -36,7 +38,7 @@ position:fixed;
 top:0;
 width:100%;
 background:rgba(255,255,255,.95);
-backdrop-filter:blur(10px);
+backdrop-filter:blur(12px);
 box-shadow:0 2px 10px rgba(0,0,0,.08);
 z-index:1000;
 }
@@ -59,7 +61,13 @@ font-weight:600;
 /* HEADER */
 
 header{
-background:linear-gradient(-45deg,#0f172a,#1e40af,#2563eb,#0f172a);
+background:linear-gradient(
+-45deg,
+#0f172a,
+#1e40af,
+#2563eb,
+#0f172a
+);
 background-size:400% 400%;
 animation:gradientMove 12s ease infinite;
 color:white;
@@ -76,11 +84,17 @@ padding:140px 20px 80px;
 .foto{
 width:220px;
 height:220px;
-border-radius:50%;
 object-fit:cover;
+border-radius:50%;
 border:6px solid white;
-box-shadow:0 15px 40px rgba(0,0,0,.3);
+box-shadow:0 15px 40px rgba(0,0,0,.35);
+margin-bottom:20px;
 animation:zoomIn 1s ease;
+transition:.4s;
+}
+
+.foto:hover{
+transform:scale(1.05);
 }
 
 @keyframes zoomIn{
@@ -94,9 +108,8 @@ transform:scale(1);
 }
 }
 
-h1{
+header h1{
 font-size:3rem;
-margin-top:20px;
 margin-bottom:10px;
 }
 
@@ -105,9 +118,11 @@ font-size:1.3rem;
 }
 
 .cargo{
-margin-top:10px;
+margin-top:15px;
 font-size:1.1rem;
 }
+
+/* BOTÕES */
 
 .botoes{
 margin-top:30px;
@@ -115,13 +130,13 @@ margin-top:30px;
 
 .btn{
 display:inline-block;
-padding:14px 24px;
-border-radius:10px;
+padding:14px 25px;
 margin:8px;
-color:white;
+border-radius:10px;
 text-decoration:none;
-font-weight:bold;
-transition:.3s ease;
+font-weight:700;
+color:white;
+transition:.3s;
 }
 
 .btn:hover{
@@ -155,7 +170,7 @@ margin-bottom:60px;
 .section-title{
 font-size:2rem;
 margin-bottom:25px;
-color:#0f172a;
+color:var(--secondary);
 }
 
 .card{
@@ -164,10 +179,22 @@ padding:30px;
 border-radius:20px;
 box-shadow:0 10px 30px rgba(0,0,0,.08);
 transition:.3s;
+animation:fadeUp .8s ease;
 }
 
 .card:hover{
 transform:translateY(-5px);
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 .skills{
@@ -180,8 +207,8 @@ gap:12px;
 background:#dbeafe;
 padding:10px 18px;
 border-radius:30px;
-color:#1e40af;
 font-weight:600;
+color:#1e40af;
 }
 
 .stats{
@@ -218,11 +245,13 @@ box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
 footer{
-background:#0f172a;
+background:var(--secondary);
 color:white;
 text-align:center;
 padding:30px;
 }
+
+/* RESPONSIVO */
 
 @media(max-width:768px){
 
@@ -235,7 +264,7 @@ width:170px;
 height:170px;
 }
 
-h1{
+header h1{
 font-size:2rem;
 }
 
@@ -246,8 +275,14 @@ margin:10px auto;
 }
 
 .section-title{
-font-size:1.6rem;
+font-size:1.5rem;
 }
+
+nav ul{
+gap:15px;
+font-size:14px;
+}
+
 }
 </style>
 </head>
@@ -265,7 +300,9 @@ font-size:1.6rem;
 
 <header>
 
-<img src="foto-renan.png" alt="Foto Profissional" class="foto">
+<img src="foto-renan.png"
+alt="Foto Profissional"
+class="foto">
 
 <h1>Renan Melo</h1>
 
@@ -291,7 +328,8 @@ class="btn curriculo">
 📄 Currículo
 </a>
 
-<a href="https://wa.me/="_blank"
+<a href="https://wa.me/559284685985?text=Olá%20Renan,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar"
+target="_blank"
 class="btn whatsapp">
 📱 WhatsApp
 </a>
@@ -309,36 +347,39 @@ class="btn whatsapp">
 <div class="card">
 
 <p>
-Profissional com experiência em Compras, Procurement,
-Desenvolvimento de Fornecedores, Logística, Administração
-e Gestão de Ativos.
+Profissional com sólida experiência nas áreas de Compras, Procurement, Desenvolvimento de Fornecedores, Logística, Administração e Gestão de Ativos, atuando em ambientes corporativos que exigem organização, análise estratégica, negociação, gestão de processos e foco contínuo em resultados.
 </p>
 
 <br>
 
 <p>
-Atualmente atuando na LG Electronics Brasil, contribuindo com negociações nacionais e internacionais, homologação de fornecedores, análise de custos, follow-up de pedidos e melhoria contínua dos processos.
+Atualmente atuo como Comprador Júnior na LG Electronics Brasil, participando de negociações com fornecedores nacionais e internacionais, desenvolvimento e homologação de fornecedores, acompanhamento de pedidos, análise de custos, gestão de contratos e suporte às atividades relacionadas à cadeia de suprimentos e abastecimento da operação.
 </p>
 
-</div>
+<br>
 
-</section>
+<p>
+Minha trajetória profissional foi construída através da atuação em diferentes áreas administrativas e operacionais, incluindo logística, almoxarifado, gestão de frotas, atendimento corporativo e processos administrativos. Essa vivência proporcionou uma visão abrangente dos negócios e uma forte capacidade de integração entre diferentes setores da organização.
+</p>
 
-<section id="competencias">
+<br>
 
-<h2 class="section-title">Competências</h2>
+<p>
+Além das atividades de Procurement, também atuo na gestão de ativos corporativos, sendo responsável pelo acompanhamento de inventários, movimentações, transferências, devoluções e descarte de equipamentos, contribuindo para a eficiência operacional, conformidade dos controles internos e melhoria dos processos organizacionais.
+</p>
 
-<div class="skills">
-<span class="skill">Procurement</span>
-<span class="skill">Strategic Sourcing</span>
-<span class="skill">Supplier Development</span>
-<span class="skill">Supply Chain</span>
-<span class="skill">Cost Reduction</span>
-<span class="skill">Negotiation</span>
-<span class="skill">Vendor Management</span>
-<span class="skill">Asset Management</span>
-<span class="skill">Excel</span>
-<span class="skill">Power BI</span>
+<br>
+
+<p>
+Ao longo da carreira desenvolvi competências voltadas para negociação, relacionamento com fornecedores, análise de indicadores, controle de processos, suporte à tomada de decisão e melhoria contínua. Mantenho constante interesse no aperfeiçoamento profissional em Supply Chain, Strategic Sourcing, Desenvolvimento de Fornecedores, Gestão Empresarial e Governança Corporativa.
+</p>
+
+<br>
+
+<p>
+Minha atuação é baseada em ética, transparência, comprometimento e foco em resultados sustentáveis, sempre buscando agregar valor às operações da empresa, fortalecer parcerias estratégicas e contribuir para o crescimento do negócio através de soluções eficientes e da excelência na execução das atividades sob minha responsabilidade.
+</p>
+
 </div>
 
 </section>
@@ -351,12 +392,12 @@ Atualmente atuando na LG Electronics Brasil, contribuindo com negociações naci
 
 <div class="stat">
 <h3>10+</h3>
-<p>Anos de experiência</p>
+<p>Anos de experiência profissional</p>
 </div>
 
 <div class="stat">
 <h3>LG</h3>
-<p>Experiência multinacional</p>
+<p>Experiência em multinacional</p>
 </div>
 
 <div class="stat">
@@ -368,6 +409,25 @@ Atualmente atuando na LG Electronics Brasil, contribuindo com negociações naci
 <h3>24/7</h3>
 <p>Experiência operacional</p>
 </div>
+
+</div>
+
+</section>
+
+<section id="competencias">
+
+<h2 class="section-title">Competências</h2>
+
+<div class="skills">
+
+<span class="skill">Procurement</span>
+<span class="skill">Strategic Sourcing</
+<span class="skill">Cost Reduction</span>
+<span class="skill">Negotiation</span>
+<span class="skill">Vendor Management</span>
+<span class="skill">Asset Management</span>
+<span class="skill">Excel Avançado</span>
+<span class="skill">Power BI</span>
 
 </div>
 
@@ -402,6 +462,7 @@ devolução e descarte de ativos corporativos.
 <h2 class="section-title">Projetos e Contribuições</h2>
 
 <div class="card">
+
 <ul>
 <li>✅ Desenvolvimento de fornecedores estratégicos</li>
 <li>✅ Negociações nacionais e internacionais</li>
@@ -409,6 +470,7 @@ devolução e descarte de ativos corporativos.
 <li>✅ Melhoria contínua de processos</li>
 <li>✅ Suporte à cadeia de suprimentos</li>
 </ul>
+
 </div>
 
 </section>
@@ -419,7 +481,7 @@ devolução e descarte de ativos corporativos.
 
 <div class="card">
 
-<p>📍 Manaus - Amazonas</p>
+<p><strong>📍 Manaus - Amazonas</strong></p>
 
 <br>
 
@@ -444,7 +506,7 @@ devolução e descarte de ativos corporativos.
 </div>
 
 <footer>
-© 2026 Renan Melo | Procurement • Supplier Development • Supply Chain
+© 2026 Renan Melo | Procurement • Supply Chain • Supplier Development
 </footer>
 
 </body>
