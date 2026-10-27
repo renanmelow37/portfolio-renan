@@ -9,219 +9,288 @@
 <style>
 
 :root{
---bg:#f8fafc;
---primary:#2563eb;
---secondary:#0f172a;
---card:#ffffff;
---text:#334155;
+    --primary:#2563eb;
+    --secondary:#0f172a;
+    --bg:#f8fafc;
+    --card:#ffffff;
+    --text:#334155;
 }
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-background:var(--bg);
-color:var(--text);
+    background:var(--bg);
+    color:var(--text);
 }
 
+/* NAVEGAÇÃO */
+
 nav{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(255,255,255,.95);
-backdrop-filter:blur(10px);
-box-shadow:0 2px 15px rgba(0,0,0,.08);
-z-index:1000;
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(12px);
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+    z-index:1000;
 }
 
 nav ul{
-display:flex;
-justify-content:center;
-gap:30px;
-list-style:none;
-padding:15px;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    list-style:none;
+    padding:15px;
 }
 
 nav a{
-text-decoration:none;
-color:#1e3a8a;
-font-weight:600;
+    text-decoration:none;
+    color:#1e3a8a;
+    font-weight:600;
 }
 
+/* HEADER */
+
 header{
-background:linear-gradient(135deg,#0f172a,#1e3a8a);
-color:white;
-text-align:center;
-padding:120px 20px 80px;
+    background:linear-gradient(
+    -45deg,
+    #0f172a,
+    #1e40af,
+    #2563eb,
+    #0f172a
+    );
+    background-size:400% 400%;
+    animation:gradientMove 12s ease infinite;
+    color:white;
+    text-align:center;
+    padding:120px 20px 80px;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
 }
 
 .foto{
-width:220px;
-height:220px;
-border-radius:50%;
-object-fit:cover;
-border:6px solid white;
-box-shadow:0 10px 30px rgba(0,0,0,.35);
-margin-bottom:20px;
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid rgba(255,255,255,.95);
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+    margin-bottom:20px;
+    animation:zoomIn 1s ease;
+    transition:.4s;
+}
+
+.foto:hover{
+    transform:scale(1.05);
 }
 
 header h1{
-font-size:3rem;
-margin-bottom:10px;
+    font-size:3rem;
+    margin-bottom:10px;
 }
 
 .subtitulo{
-font-size:1.3rem;
-opacity:.9;
+    font-size:1.3rem;
 }
 
+/* BOTÕES */
+
 .botoes{
-margin-top:30px;
+    margin-top:30px;
 }
 
 .btn{
-display:inline-block;
-margin:8px;
-padding:14px 24px;
-border-radius:10px;
-text-decoration:none;
-font-weight:bold;
-color:white;
-transition:.3s;
+    display:inline-block;
+    margin:8px;
+    padding:14px 24px;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:.3s;
 }
 
 .btn:hover{
-transform:translateY(-3px);
+    transform:translateY(-4px);
 }
 
 .linkedin{
-background:#0077B5;
+    background:#0077b5;
 }
 
 .curriculo{
-background:#16a34a;
+    background:#16a34a;
 }
 
 .whatsapp{
-background:#25d366;
+    background:#25d366;
 }
 
+/* CONTAINER */
+
 .container{
-max-width:1200px;
-margin:auto;
-padding:60px 20px;
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
 }
 
 section{
-margin-bottom:60px;
+    margin-bottom:60px;
 }
 
 .section-title{
-font-size:2rem;
-color:var(--secondary);
-margin-bottom:25px;
+    font-size:2rem;
+    color:var(--secondary);
+    margin-bottom:25px;
 }
 
+/* CARDS */
+
 .card{
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 5px 25px rgba(0,0,0,.08);
-transition:.3s;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+    animation:fadeUp .8s ease;
 }
 
 .card:hover{
-transform:translateY(-5px);
+    transform:translateY(-8px);
 }
 
 .skills{
-display:flex;
-flex-wrap:wrap;
-gap:12px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
 }
 
 .skill{
-background:#dbeafe;
-color:#1e40af;
-padding:10px 18px;
-border-radius:30px;
-font-weight:600;
+    background:#dbeafe;
+    color:#1e40af;
+    padding:10px 18px;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.skill:hover{
+    transform:translateY(-3px);
 }
 
 .stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
 }
 
 .stat{
-background:white;
-padding:25px;
-border-radius:20px;
-text-align:center;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.stat:hover{
+    transform:translateY(-5px);
 }
 
 .stat h3{
-font-size:36px;
-color:var(--primary);
-margin-bottom:8px;
+    font-size:36px;
+    color:var(--primary);
+    margin-bottom:10px;
 }
 
 .timeline{
-display:flex;
-flex-direction:column;
-gap:20px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
 }
 
 .item{
-background:white;
-padding:25px;
-border-left:5px solid var(--primary);
-border-radius:12px;
-box-shadow:0 4px 15px rgba(0,0,0,.08);
+    background:white;
+    padding:25px;
+    border-left:5px solid var(--primary);
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    animation:fadeUp .9s ease;
 }
 
-footer{
-background:var(--secondary);
-color:white;
-text-align:center;
-padding:30px;
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
+
+@keyframes zoomIn{
+    from{
+        opacity:0;
+        transform:scale(.9);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* FOOTER */
+
+footer{
+    background:var(--secondary);
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* RESPONSIVO */
 
 @media(max-width:768px){
 
-nav ul{
-gap:15px;
-font-size:14px;
-}
+    nav ul{
+        gap:12px;
+        font-size:14px;
+        flex-wrap:wrap;
+    }
 
-header h1{
-font-size:2rem;
-}
+    .foto{
+        width:170px;
+        height:170px;
+    }
 
-.foto{
-width:170px;
-height:170px;
-}
+    header h1{
+        font-size:2rem;
+    }
 
-.btn{
-display:block;
-width:90%;
-margin:10px auto;
-}
+    .btn{
+        display:block;
+        width:90%;
+        margin:12px auto;
+    }
 
-.section-title{
-font-size:1.6rem;
-}
+    .section-title{
+        font-size:1.6rem;
+    }
+
 }
 </style>
 </head>
@@ -237,10 +306,7 @@ font-size:1.6rem;
 </ul>
 </nav>
 
-<header>
-
-<img src="foto-renan.png"
-alt="Foto de perfil"
+< de Perfil"
 class="foto">
 
 <h1>Renan Melo</h1>
@@ -261,9 +327,7 @@ class="btn linkedin">
 🔗 LinkedIn
 </a>
 
-<a href="curriculo-renan-melo.pdf"
-target="_blank"
-class="btn curriculo">
+curriculo-renan-melo.pdf
 📄 Currículo
 </a>
 
@@ -287,14 +351,17 @@ class="btn whatsapp">
 
 <p>
 Profissional com experiência em Compras, Procurement,
-Desenvolvimento de Fornecedores, Logística, Administração
-e Gestão de Ativos.
+Desenvolvimento de Fornecedores, Logística,
+Administração e Gestão de Ativos.
 </p>
 
 <br>
 
 <p>
-Atualmente atuando na LG Electronics Brasil, contribuindo em negociações nacionais e internacionais, homologação de fornecedores, análise de custos e melhoria contínua dos processos.
+Atualmente atuando na LG Electronics Brasil,
+contribuindo em negociações nacionais e internacionais,
+homologação de fornecedores, análise de custos,
+follow-up de pedidos e melhoria contínua dos processos.
 </p>
 
 </div>
@@ -314,7 +381,7 @@ Atualmente atuando na LG Electronics Brasil, contribuindo em negociações nacio
 
 <div class="stat">
 <h3>LG</h3>
-<p>Experiência multinacional</p>
+<p>Experiência Multinacional</p>
 </div>
 
 <div class="stat">
@@ -324,7 +391,7 @@ Atualmente atuando na LG Electronics Brasil, contribuindo em negociações nacio
 
 <div class="stat">
 <h3>24/7</h3>
-<p>Experiência operacional</p>
+<p>Experiência Operacional</p>
 </div>
 
 </div>
@@ -342,8 +409,8 @@ Atualmente atuando na LG Electronics Brasil, contribuindo em negociações nacio
 <span class="skill">Supplier Development</span>
 <span class="skill">Supply Chain</span>
 <span class="skill">Cost Reduction</span>
-<span class="skill">Vendor Management</span>
 <span class="skill">Negotiation</span>
+<span class="skill">Vendor Management</span>
 <span class="skill">Asset Management</span>
 <span class="skill">Excel</span>
 <span class="skill">Power BI</span>
@@ -361,12 +428,12 @@ Atualmente atuando na LG Electronics Brasil, contribuindo em negociações nacio
 <div class="item">
 <h3>Comprador Júnior</h3>
 <p><strong>LG Electronics Brasil</strong></p>
-<p>2025 - Atual</p>
+<p>Março/2025 - Atual</p>
 </div>
 
 <div class="item">
 <h3>Gestão de Ativos</h3>
-<p>Inventário, movimentação, transferência e descarte de ativos corporativos.</p>
+<p>Inventário, movimentação, transferência, devolução e descarte de ativos corporativos.</p>
 </div>
 
 </div>
@@ -381,7 +448,9 @@ Atualmente atuando na LG Electronics Brasil, contribuindo em negociações nacio
 
 <ul>
 <li>✅ Desenvolvimento de fornecedores estratégicos</li>
-li>✅ Melhoria contínua de processos</li>
+<li>✅ Negociações nacionais e internacionais</li>
+<li>✅ Gestão patrimonial e de ativos</li>
+<li>✅ Melhoria contínua de processos</li>
 <li>✅ Suporte à cadeia de suprimentos</li>
 </ul>
 
@@ -400,19 +469,7 @@ li>✅ Melhoria contínua de processos</li>
 <br>
 
 <p>
-LinkedIn:
-<a href="https://www.linkedin.com/in/renanmelow37/" target="_blank">
-linkedin.com/in/renanmelow37
-</a>
-</p>
-
-<br>
-
-<p>
-WhatsApp:
-<a href="https://wa.me/559284685985" target="_blank">
-+55 92 98468-5985
-</a>
+📧 Conecte-se pelo LinkedIn ou WhatsApp
 </p>
 
 </div>
