@@ -1,4 +1,4 @@
-<img src="foto-renan.png" alt="Foto profissional" class="foto">
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -6,120 +6,155 @@
 <title>Renan Melo | Procurement & Supply Chain</title>
 
 <style>
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-background:#f5f7fa;
-color:#333;
-line-height:1.6;
+    background:#f5f7fa;
+    color:#333;
+    line-height:1.6;
 }
 
 header{
-background:linear-gradient(135deg,#0f172a,#1e40af);
-color:white;
-text-align:center;
-padding:80px 20px;
+    background:linear-gradient(135deg,#0f172a,#1e40af);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
 }
 
 .foto{
-width:220px;
-height:220px;
-border-radius:50%;
-object-fit:cover;
-border:5px solid white;
-box-shadow:0 5px 20px rgba(0,0,0,.3);
-margin-bottom:20px;
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid white;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+    margin-bottom:25px;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:1.2rem;
 }
 
 .container{
-width:90%;
-max-width:1100px;
-margin:auto;
-padding:50px 0;
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    padding:50px 0;
 }
 
 section{
-margin-bottom:50px;
+    margin-bottom:50px;
 }
 
-h2{
-color:#1e40af;
-margin-bottom:20px;
-border-left:5px solid #1e40af;
-padding-left:10px;
+.section-title{
+    color:#1e40af;
+    margin-bottom:20px;
+    border-left:5px solid #1e40af;
+    padding-left:10px;
 }
 
 .card{
-background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 2px 12px rgba(0,0,0,.1);
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
 }
 
 .skills{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
 }
 
 .skill{
-background:#dbeafe;
-color:#1e3a8a;
-padding:10px 15px;
-border-radius:20px;
-font-weight:bold;
-}
-
-.btn{
-display:inline-block;
-background:#0077b5;
-color:white;
-text-decoration:none;
-padding:12px 25px;
-border-radius:8px;
-margin-top:15px;
-font-weight:bold;
+    background:#dbeafe;
+    color:#1e3a8a;
+    padding:10px 15px;
+    border-radius:20px;
+    font-weight:bold;
 }
 
 .timeline{
-display:flex;
-flex-direction:column;
-gap:20px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
 }
 
 .item{
-background:white;
-padding:20px;
-border-left:5px solid #2563eb;
-border-radius:10px;
-box-shadow:0 2px 12px rgba(0,0,0,.1);
+    background:white;
+    padding:20px;
+    border-left:5px solid #2563eb;
+    border-radius:10px;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+
+.botoes{
+    margin-top:25px;
+}
+
+.btn{
+    display:inline-block;
+    margin:8px;
+    padding:12px 24px;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.linkedin{
+    background:#0077b5;
+}
+
+.curriculo{
+    background:#16a34a;
+}
+
+.whatsapp{
+    background:#25d366;
 }
 
 footer{
-background:#0f172a;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:50px;
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
 }
 
 @media(max-width:768px){
 
-.foto{
-width:170px;
-height:170px;
+    .foto{
+        width:180px;
+        height:180px;
+    }
+
+    header h1{
+        font-size:2.2rem;
+    }
+
+    .btn{
+        display:block;
+        margin:10px auto;
+        width:80%;
+    }
+
 }
 
-header h1{
-font-size:34px;
-}
-
-}
 </style>
 </head>
 
@@ -127,7 +162,9 @@ font-size:34px;
 
 <header>
 
-<img src="foto-renan.png" alt="Foto profissional" class="foto">
+<img src="foto-renan.png"
+alt="Renan Melo"
+class="foto">
 
 <h1>Renan Melo</h1>
 
@@ -141,12 +178,27 @@ Procurement • Supplier Development • Strategic Sourcing • Supply Chain
 Comprador Júnior | LG Electronics Brasil
 </p>
 
-<a
-href="https://www.linkedin.com/in/renanmelow37/"
+<div class="botoes">
+
+<a href="https://www.linkedin.com/in/renanmelow37/"
 target="_blank"
-class="btn">
-Conectar no LinkedIn
+class="btn linkedin">
+🔗 LinkedIn
 </a>
+
+<a href="curriculo-renan-melo.pdf"
+target="_blank"
+class="btn curriculo">
+📄 Baixar Currículo
+</a>
+
+<a href="https://wa.me/559284685985?text=Olá%20Renan,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar."
+target="_blank"
+class="btn whatsapp">
+📱 WhatsApp
+</a>
+
+</div>
 
 </header>
 
@@ -154,23 +206,23 @@ Conectar no LinkedIn
 
 <section>
 
-<h2>Sobre Mim</h2>
+<h2 class="section-title">Sobre Mim</h2>
 
 <div class="card">
 
 <p>
 Profissional com experiência em Compras, Procurement,
-Desenvolvimento de Fornecedores, Logística, Administração
-e Gestão de Ativos.
+Desenvolvimento de Fornecedores, Logística,
+Administração e Gestão de Ativos.
 </p>
 
 <br>
 
 <p>
-Atualmente atuando na LG Electronics Brasil,
+Atualmente atuo na LG Electronics Brasil,
 apoiando negociações nacionais e internacionais,
 homologação de fornecedores, acompanhamento de pedidos,
-análise de custos e melhoria contínua dos processos.
+análise de custos e iniciativas voltadas à melhoria contínua.
 </p>
 
 </div>
@@ -179,7 +231,7 @@ análise de custos e melhoria contínua dos processos.
 
 <section>
 
-<h2>Competências</h2>
+<h2 class="section-title">Competências</h2>
 
 <div class="skills">
 
@@ -200,20 +252,22 @@ análise de custos e melhoria contínua dos processos.
 
 <section>
 
-<h2>Experiência Profissional</h2>
+<h2 class="section-title">Experiência Profissional</h2>
 
 <div class="timeline">
 
 <div class="item">
+
 <h3>Comprador Júnior</h3>
+
 <p><strong>LG Electronics Brasil</strong></p>
+
 <p>2025 - Atual</p>
 
 <ul>
 <li>Negociação com fornecedores nacionais e internacionais.</li>
-<li>Desenvolvimento de fornecedores.</li>
-<li>Homologação e acompanhamento de fornecedores.</li>
-<li>Follow-up de pedidos.</li>
+<li>Desenvolvimento e homologação de fornecedores.</li>
+<li>Follow-up de pedidos e entregas.</li>
 <li>Análise de custos e oportunidades de savings.</li>
 </ul>
 
@@ -224,7 +278,8 @@ análise de custos e melhoria contínua dos processos.
 <h3>Gestão de Ativos</h3>
 
 <p>
-erência e descarte de ativos.
+Responsável pelo inventário, movimentação,
+transferência, devolução e descarte de ativos corporativos.
 </p>
 
 </div>
@@ -235,20 +290,14 @@ erência e descarte de ativos.
 
 <section>
 
-<h2>Diferenciais</h2>
+<h2 class="section-title">Projetos e Contribuições</h2>
 
 <div class="card">
 
-<ul>
-
-<li>✅ Experiência em multinacional global</li>
-<li>✅ Desenvolvimento de fornecedores</li>
-<li>✅ Strategic Sourcing</li>
-<li>✅ Supply Chain</li>
-<li>✅ Gestão de Ativos</li>
-<li>✅ Compliance e Governança</li>
-<li>✅ Negociações nacionais e internacionais</li>
-
+<ul>onais.</li>
+<li>✅ Acompanhamento de fornecedores globais.</li>
+<li>✅ Melhoria contínua dos processos de compras.</li>
+<li>✅ Suporte à cadeia de suprimentos.</li>
 </ul>
 
 </div>
@@ -257,20 +306,29 @@ erência e descarte de ativos.
 
 <section>
 
-<h2>Contato</h2>
+<h2 class="section-title">Contato</h2>
 
-<div class="card" style="text-align:center;">
+<div class="card">
 
-<p>📍 Manaus - Amazonas</p>
+<p><strong>📍 Manaus - Amazonas</strong></p>
 
 <br>
 
-<a
-href="https://www.linkedin.com/in/renanmelow37/"
-target="_blank"
-class="btn">
-LinkedIn
+<p>
+🔗 LinkedIn:
+<a href="https://www.linkedin.com/in/renanmelow37/" target="_blank">
+linkedin.com/in/renanmelow37
 </a>
+</p>
+
+<br>
+
+<p>
+📱 WhatsApp:
+https://wa.me/559284685985
++55 92 98468-5985
+</a>
+</p>
 
 </div>
 
@@ -279,7 +337,9 @@ LinkedIn
 </div>
 
 <footer>
-© 2026 Renan Melo | Procurement & Supply Chain
+
+© 2026 Renan Melo | Procurement • Supply Chain • Supplier Development
+
 </footer>
 
 </body>
