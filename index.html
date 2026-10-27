@@ -7,251 +7,255 @@
 
 <style>
 :root{
-  --primary:#2563eb;
-  --dark:#0f172a;
-  --light:#f8fafc;
-  --text:#334155;
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --text:#334155;
 }
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Segoe UI',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  background:var(--light);
-  color:var(--text);
-  line-height:1.7;
+    background:var(--light);
+    color:var(--text);
+    line-height:1.7;
 }
 
 nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:rgba(255,255,255,.95);
-  backdrop-filter:blur(10px);
-  box-shadow:0 2px 10px rgba(0,0,0,.08);
-  z-index:1000;
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(10px);
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    z-index:1000;
 }
 
 nav ul{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  list-style:none;
-  padding:18px;
-  flex-wrap:wrap;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    list-style:none;
+    padding:18px;
+    flex-wrap:wrap;
 }
 
 nav a{
-  text-decoration:none;
-  color:var(--dark);
-  font-weight:600;
+    text-decoration:none;
+    color:var(--dark);
+    font-weight:600;
 }
 
 header{
-  background:linear-gradient(
-    -45deg,
-    #0f172a,
-    #1e40af,
-    #2563eb,
-    #0f172a
-  );
-  background-size:400% 400%;
-  animation:gradient 12s ease infinite;
-  color:white;
-  text-align:center;
-  padding:150px 20px 90px;
+    background:linear-gradient(-45deg,#0f172a,#1e40af,#2563eb,#0f172a);
+    background-size:400% 400%;
+    animation:gradient 12s ease infinite;
+    color:white;
+    text-align:center;
+    padding:150px 20px 90px;
 }
 
 @keyframes gradient{
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
 }
 
 .foto{
-  width:220px;
-  height:220px;
-  object-fit:cover;
-  border-radius:50%;
-  border:6px solid white;
-  box-shadow:0 15px 40px rgba(0,0,0,.35);
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid white;
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
 }
 
 header h1{
-  margin-top:25px;
-  font-size:3rem;
+    margin-top:25px;
+    font-size:3rem;
 }
 
 .tagline{
-  max-width:900px;
-  margin:20px auto;
-  font-size:1.2rem;
+    max-width:900px;
+    margin:20px auto;
+    font-size:1.2rem;
 }
 
 .botoes{
-  margin-top:30px;
+    margin-top:30px;
 }
 
 .btn{
-  display:inline-block;
-  padding:14px 28px;
-  margin:8px;
-  border-radius:10px;
-  text-decoration:none;
-  color:white;
-  font-weight:bold;
-  transition:.3s;
+    display:inline-block;
+    padding:14px 28px;
+    margin:8px;
+    border-radius:10px;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:.3s;
 }
 
 .btn:hover{
-  transform:translateY(-4px);
+    transform:translateY(-4px);
 }
 
 .linkedin{
-  background:#0077b5;
+    background:#0077b5;
 }
 
 .curriculo{
-  background:#16a34a;
+    background:#16a34a;
 }
 
 .whatsapp{
-  background:#25d366;
+    background:#25d366;
 }
 
 .container{
-  max-width:1200px;
-  margin:auto;
-  padding:70px 20px;
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
 }
 
 section{
-  margin-bottom:80px;
+    margin-bottom:80px;
 }
 
 .titulo{
-  font-size:2.2rem;
-  margin-bottom:25px;
-  color:var(--dark);
+    font-size:2.2rem;
+    margin-bottom:25px;
+    color:var(--dark);
 }
 
 .card{
-  background:white;
-  padding:35px;
-  border-radius:20px;
-  box-shadow:0 8px 25px rgba(0,0,0,.08);
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
 .timeline{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
 }
 
 .etapa{
-  background:white;
-  padding:25px;
-  border-radius:16px;
-  box-shadow:0 6px 20px rgba(0,0,0,.08);
-  text-align:center;
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+    text-align:center;
 }
 
 .etapa h3{
-  color:var(--primary);
+    color:var(--primary);
 }
 
 .areas{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
 }
 
 .area{
-  background:white;
-  padding:25px;
-  border-radius:20px;
-  box-shadow:0 6px 20px rgba(0,0,0,.08);
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
 }
 
 .area h3{
-  color:var(--primary);
-  margin-bottom:10px;
+    color:var(--primary);
+    margin-bottom:10px;
 }
 
 .destaques{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
 .destaque{
-  background:white;
-  padding:25px;
-  border-radius:20px;
-  box-shadow:0 6px 20px rgba(0,0,0,.08);
-  text-align:center;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
+    text-align:center;
 }
 
 .destaque h2{
-  color:var(--primary);
-  font-size:34px;
+    color:var(--primary);
+    font-size:34px;
 }
 
 .lista{
-  padding-left:20px;
+    padding-left:20px;
 }
 
 .lista li{
-  margin-bottom:12px;
+    margin-bottom:12px;
 }
 
 .citacao{
-  background:#eff6ff;
-  border-left:5px solid var(--primary);
-  padding:25px;
-  border-radius:10px;
-  font-style:italic;
+    background:#eff6ff;
+    border-left:5px solid var(--primary);
+    padding:25px;
+    border-radius:10px;
+    font-style:italic;
 }
 
 footer{
-  background:var(--dark);
-  color:white;
-  text-align:center;
-  padding:30px;
+    background:var(--dark);
+    color:white;
+    text-align:center;
+    padding:30px;
 }
 
-@media(max-width:768px){
+@media(max-width:900px){
+    .destaques{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
 
-  header{
-    padding:140px 20px 70px;
-  }
+@media(max-width:600px){
 
-  .foto{
-    width:170px;
-    height:170px;
-  }
+    .destaques{
+        grid-template-columns:1fr;
+    }
 
-  header h1{
-    font-size:2rem;
-  }
+    header{
+        padding:140px 20px 70px;
+    }
 
-  .btn{
-    display:block;
-    width:90%;
-    margin:10px auto;
-  }
+    .foto{
+        width:170px;
+        height:170px;
+    }
 
-  .titulo{
-    font-size:1.7rem;
-  }
+    header h1{
+        font-size:2rem;
+    }
+
+    .btn{
+        display:block;
+        width:90%;
+        margin:10px auto;
+    }
+
+    .titulo{
+        font-size:1.7rem;
+    }
 }
 </style>
 </head>
@@ -262,8 +266,7 @@ footer{
 <ul>
 <li><a href="#jornada">Jornada</a></li>
 <li><a href="#atuacao">Atuação</a></li>
-<li><a href="#projetos">Projetos</a></li>
-<li><a href="#contato">Contato</a></li>
+<li><a href="#projetos"ntato</a></li>
 </ul>
 </nav>
 
@@ -361,7 +364,7 @@ Essa trajetória me permitiu compreender os desafios reais das operações e des
 
 <div class="area">
 <h3>Supplier Development</h3>
-<p>Identificação, homologação e desenvolvimento de fornecedores estratégicos.</p>
+<p>Homologação e desenvolvimento de fornecedores estratégicos.</p>
 </div>
 
 <div class="area">
@@ -371,7 +374,7 @@ Essa trajetória me permitiu compreender os desafios reais das operações e des
 
 <div class="area">
 <h3>Supply Chain</h3>
-<p>Integração entre áreas, continuidade operacional e suporte à cadeia de suprimentos.</p>
+<p>Integração entre áreas e suporte à cadeia de suprimentos.</p>
 </div>
 
 </div>
@@ -384,7 +387,10 @@ Essa trajetória me permitiu compreender os desafios reais das operações e des
 
 <div class="destaques">
 
-<div class="destaque">iv>
+<div class="destaque">
+<h2>10+</h2>
+<p>Anos de experiência</p>
+</div>
 
 <div class="destaque">
 <h2>LG</h2>
@@ -412,11 +418,11 @@ Essa trajetória me permitiu compreender os desafios reais das operações e des
 <div class="card">
 
 <ul class="lista">
-<li>Desenvolvimento e homologação de fornecedores para atendimento de demandas operacionais e produtivas.</li>
-<li>Suporte à gestão patrimonial e controle de ativos corporativos.</li>
-<li>Acompanhamento de pedidos e relacionamento com fornecedores nacionais e internacionais.</li>
-<li>Participação em atividades ligadas à melhoria contínua dos processos de compras.</li>
-<li>Contribuição para eficiência operacional através de controles, organização e acompanhamento de processos.</li>
+<li>Desenvolvimento e homologação de fornecedores.</li>
+<li>Gestão patrimonial e controle de ativos corporativos.</li>
+<li>Negociações nacionais e internacionais.</li>
+<li>Melhoria contínua dos processos de compras.</li>
+<li>Suporte à cadeia de suprimentos.</li>
 </ul>
 
 </div>
@@ -428,7 +434,7 @@ Essa trajetória me permitiu compreender os desafios reais das operações e des
 <h2 class="titulo">Minha Filosofia Profissional</h2>
 
 <div class="citacao">
-"Acredito que Procurement não se resume à negociação de preços. O verdadeiro valor está na construção de relacionamentos sustentáveis, no desenvolvimento de fornecedores confiáveis e na geração de resultados que fortaleçam toda a cadeia de suprimentos."
+"Acredito que Procurement não se resume à negociação de preços. O verdadeiro valor está na construção de relacionamentos sustentáveis, no desenvolvimento de fornecedores confiáveis e na geração de resultados para toda a cadeia de suprimentos."
 </div>
 
 </section>
@@ -444,18 +450,16 @@ Essa trajetória me permitiu compreender os desafios reais das operações e des
 <br>
 
 <p>
-🔗
 <a href="https://www.linkedin.com/in/renanmelow37/" target="_blank">
-LinkedIn
+🔗 LinkedIn
 </a>
 </p>
 
 <br>
 
 <p>
-📱
 <a href="https://wa.me/559284685985" target="_blank">
-+55 92 98468-5985
+📱 +55 92 98468‑5985
 </a>
 </p>
 
