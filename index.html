@@ -8,9 +8,11 @@
 <style>
 :root{
     --primary:#2563eb;
+    --secondary:#1e40af;
     --dark:#0f172a;
     --light:#f8fafc;
     --text:#334155;
+    --white:#ffffff;
 }
 
 *{
@@ -30,6 +32,8 @@ body{
     line-height:1.7;
 }
 
+/* MENU */
+
 nav{
     position:fixed;
     top:0;
@@ -43,7 +47,7 @@ nav{
 nav ul{
     display:flex;
     justify-content:center;
-    gap:30px;
+    gap:35px;
     list-style:none;
     padding:18px;
     flex-wrap:wrap;
@@ -53,55 +57,85 @@ nav a{
     text-decoration:none;
     color:var(--dark);
     font-weight:600;
+    transition:.3s;
 }
 
+nav a:hover{
+    color:var(--primary);
+}
+
+/* HERO */
+
 header{
-    background:linear-gradient(-45deg,#0f172a,#1e40af,#2563eb,#0f172a);
+    background:linear-gradient(
+        -45deg,
+        #0f172a,
+        #1e40af,
+        #2563eb,
+        #0f172a
+    );
+
     background-size:400% 400%;
-    animation:gradient 12s ease infinite;
+    animation:gradientMove 12s ease infinite;
+
     color:white;
     text-align:center;
     padding:150px 20px 90px;
 }
 
-@keyframes gradient{
+@keyframes gradientMove{
     0%{background-position:0% 50%;}
     50%{background-position:100% 50%;}
     100%{background-position:0% 50%;}
 }
 
 .foto{
-    width:220px;
-    height:220px;
+    width:240px;
+    height:240px;
     object-fit:cover;
     border-radius:50%;
-    border:6px solid white;
-    box-shadow:0 15px 40px rgba(0,0,0,.35);
+    border:8px solid rgba(255,255,255,.95);
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+    transition:.4s;
+}
+
+.foto:hover{
+    transform:scale(1.05);
 }
 
 header h1{
     margin-top:25px;
-    font-size:3rem;
+    font-size:4rem;
+    font-weight:800;
+    color:white;
+    text-shadow:0 4px 20px rgba(0,0,0,.25);
+}
+
+.cargo{
+    font-size:1.1rem;
+    margin-top:10px;
+    color:#f8fafc;
 }
 
 .tagline{
     max-width:900px;
-    margin:20px auto;
-    font-size:1.2rem;
+    margin:25px auto;
+    font-size:1.25rem;
+    color:#e2e8f0;
 }
 
 .botoes{
-    margin-top:30px;
+    margin-top:35px;
 }
 
 .btn{
     display:inline-block;
     padding:14px 28px;
     margin:8px;
-    border-radius:10px;
+    border-radius:12px;
     text-decoration:none;
     color:white;
-    font-weight:bold;
+    font-weight:700;
     transition:.3s;
 }
 
@@ -121,10 +155,12 @@ header h1{
     background:#25d366;
 }
 
+/* CONTEÚDO */
+
 .container{
     max-width:1200px;
     margin:auto;
-    padding:70px 20px;
+    padding:80px 20px;
 }
 
 section{
@@ -141,7 +177,7 @@ section{
     background:white;
     padding:35px;
     border-radius:20px;
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
 .timeline{
@@ -153,13 +189,14 @@ section{
 .etapa{
     background:white;
     padding:25px;
-    border-radius:16px;
-    box-shadow:0 6px 20px rgba(0,0,0,.08);
+    border-radius:20px;
     text-align:center;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
 }
 
 .etapa h3{
     color:var(--primary);
+    margin-bottom:10px;
 }
 
 .areas{
@@ -190,13 +227,13 @@ section{
     background:white;
     padding:25px;
     border-radius:20px;
-    box-shadow:0 6px 20px rgba(0,0,0,.08);
     text-align:center;
+    box-shadow:0 6px 20px rgba(0,0,0,.08);
 }
 
 .destaque h2{
+    font-size:36px;
     color:var(--primary);
-    font-size:34px;
 }
 
 .lista{
@@ -211,7 +248,8 @@ section{
     background:#eff6ff;
     border-left:5px solid var(--primary);
     padding:25px;
-    border-radius:10px;
+    border-radius:12px;
+    font-size:1.1rem;
     font-style:italic;
 }
 
@@ -222,29 +260,29 @@ footer{
     padding:30px;
 }
 
+/* RESPONSIVO */
+
 @media(max-width:900px){
+
     .destaques{
         grid-template-columns:repeat(2,1fr);
     }
+
 }
 
 @media(max-width:600px){
-
-    .destaques{
-        grid-template-columns:1fr;
-    }
 
     header{
         padding:140px 20px 70px;
     }
 
     .foto{
-        width:170px;
-        height:170px;
+        width:180px;
+        height:180px;
     }
 
     header h1{
-        font-size:2rem;
+        font-size:2.5rem;
     }
 
     .btn{
@@ -253,31 +291,39 @@ footer{
         margin:10px auto;
     }
 
+    .destaques{
+        grid-template-columns:1fr;
+    }
+
     .titulo{
-        font-size:1.7rem;
+        font-size:1.8rem;
     }
 }
 </style>
 </head>
-
 <body>
 
 <nav>
 <ul>
 <li><a href="#jornada">Jornada</a></li>
 <li><a href="#atuacao">Atuação</a></li>
-<li><a href="#projetos"ntato</a></li>
+<li><a href="#projetos">Projetos</a></li>
+<li><a href="#contato">Contato</a></li>
 </ul>
 </nav>
 
 <header>
 
-<img src="foto-renan.png" alt="Foto profissional" class="foto">
+<img src="foto-renan.png" alt="Foto Profissional" class="foto">
 
 <h1>Renan Melo</h1>
 
+<p class="cargo">
+Comprador Júnior | LG Electronics Brasil
+</p>
+
 <p class="tagline">
-Transformando necessidades operacionais em soluções sustentáveis através de Procurement, Desenvolvimento de Fornecedores, Gestão de Ativos e Supply Chain.
+Conectando operações, fornecedores e estratégia para gerar valor através de Procurement, Desenvolvimento de Fornecedores, Gestão de Ativos e Supply Chain.
 </p>
 
 <div class="botoes">
@@ -307,13 +353,13 @@ WhatsApp
 <div class="card">
 
 <p>
-Minha carreira foi construída a partir da operação. Antes de atuar em Procurement, desenvolvi experiência em logística, controle de materiais, gestão administrativa, atendimento corporativo e suporte operacional.
+Minha carreira foi construída a partir da operação. Antes de atuar em Procurement, desenvolvi experiência em logística, controle de materiais, administração, gestão de frotas e suporte operacional.
 </p>
 
 <br>
 
 <p>
-Essa trajetória me permitiu compreender os desafios reais das operações e desenvolver uma visão integrada entre compras, fornecedores, gestão patrimonial e cadeia de suprimentos.
+Essa trajetória me proporcionou uma visão ampla dos processos empresariais, permitindo conectar necessidades operacionais, fornecedores e estratégia de negócios para gerar resultados sustentáveis.
 </p>
 
 </div>
@@ -329,17 +375,13 @@ Essa trajetória me permitiu compreender os desafios reais das operações e des
 
 <div class="etapa">
 <h3>Administração</h3>
-<p>Processos e suporte corporativo</p>
+<p>Suporte e processos corporativos</p>
 </div>
 
 <div class="etapa">
-<h3>Gestão de Frotas</h3>
-<p>Coordenação operacional</p>
-</div>
-
-<div class="etapa">
+<h3>Gestão de Frotas</h3> class="etapa">
 <h3>Compras</h3>
-<p>Negociação e fornecedores</p>
+<p>Negociações e fornecedores</p>
 </div>
 
 <div class="etapa">
@@ -359,7 +401,7 @@ Essa trajetória me permitiu compreender os desafios reais das operações e des
 
 <div class="area">
 <h3>Procurement</h3>
-<p>Negociação, análise de custos, relacionamento com fornecedores e suporte ao abastecimento.</p>
+<p>Negociação, análise de custos, relacionamento com fornecedores e abastecimento.</p>
 </div>
 
 <div class="area">
@@ -369,12 +411,12 @@ Essa trajetória me permitiu compreender os desafios reais das operações e des
 
 <div class="area">
 <h3>Gestão de Ativos</h3>
-<p>Inventário, movimentação, transferência e controle patrimonial corporativo.</p>
+<p>Inventário, movimentação, transferência e controle patrimonial.</p>
 </div>
 
 <div class="area">
 <h3>Supply Chain</h3>
-<p>Integração entre áreas e suporte à cadeia de suprimentos.</p>
+<p>Integração de processos e suporte à cadeia de suprimentos.</p>
 </div>
 
 </div>
@@ -394,12 +436,12 @@ Essa trajetória me permitiu compreender os desafios reais das operações e des
 
 <div class="destaque">
 <h2>LG</h2>
-<p>Multinacional global</p>
+<p>Experiência multinacional</p>
 </div>
 
 <div class="destaque">
 <h2>24/7</h2>
-<p>Experiência operacional</p>
+<p>Vivência operacional</p>
 </div>
 
 <div class="destaque">
@@ -418,11 +460,11 @@ Essa trajetória me permitiu compreender os desafios reais das operações e des
 <div class="card">
 
 <ul class="lista">
-<li>Desenvolvimento e homologação de fornecedores.</li>
+<li>Desenvolvimento e homologação de fornecedores estratégicos.</li>
 <li>Gestão patrimonial e controle de ativos corporativos.</li>
-<li>Negociações nacionais e internacionais.</li>
-<li>Melhoria contínua dos processos de compras.</li>
-<li>Suporte à cadeia de suprimentos.</li>
+<li>Acompanhamento de fornecedores nacionais e internacionais.</li>
+<li>Melhoria contínua em processos administrativos e de compras.</li>
+<li>Suporte às operações da cadeia de suprimentos.</li>
 </ul>
 
 </div>
@@ -434,7 +476,7 @@ Essa trajetória me permitiu compreender os desafios reais das operações e des
 <h2 class="titulo">Minha Filosofia Profissional</h2>
 
 <div class="citacao">
-"Acredito que Procurement não se resume à negociação de preços. O verdadeiro valor está na construção de relacionamentos sustentáveis, no desenvolvimento de fornecedores confiáveis e na geração de resultados para toda a cadeia de suprimentos."
+“Procurement não é apenas negociar preços. É desenvolver relacionamentos sustentáveis, fortalecer fornecedores estratégicos e gerar valor para toda a cadeia de suprimentos.”
 </div>
 
 </section>
@@ -445,21 +487,23 @@ Essa trajetória me permitiu compreender os desafios reais das operações e des
 
 <div class="card">
 
-<p><strong>📍 Manaus - Amazonas</strong></p>
+<p><strong>📍 Manaus – Amazonas</strong></p>
 
 <br>
 
 <p>
+🔗
 <a href="https://www.linkedin.com/in/renanmelow37/" target="_blank">
-🔗 LinkedIn
+linkedin.com/in/renanmelow37
 </a>
 </p>
 
 <br>
 
 <p>
+📱
 <a href="https://wa.me/559284685985" target="_blank">
-📱 +55 92 98468‑5985
++55 92 98468-5985
 </a>
 </p>
 
