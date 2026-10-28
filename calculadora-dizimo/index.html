@@ -1,1 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora Cristã</title>
 
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:500px;
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.logo h1{
+    color:#0f172a;
+    font-size:28px;
+}
+
+.logo p{
+    color:#64748b;
+    margin-top:5px;
+}
+
+.verse{
+    background:#f8fafc;
+    border-left:5px solid #16a34a;
+    padding:15px;
+    border-radius:10px;
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+    color:#334155;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:1px solid #cbd5e1;
+    border-radius:10px;
+    font-size:16px;
+}
+
+input:focus{
+    outline:none;
+    border-color:#16a34a;
+}
+
+button{
+    width:100%;
+    background:#16a34a;
+    color:white;
+    border:none;
+    padding:15px;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#15803d;
+}
+
+.resultado{
+    margin-top:25px;
+    background:#f8fafc;
+    padding:20px;
+    border-radius:15px;
+    display:none;
+}
+
+.item{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:12px;
+}
+
+.total{
+    margin-top:15px;
+    padding-top:15px;
+    border-top:2px solid #d1d5db;
+    font-size:22px;
+    font-weight:bold;
+    color:#16a34a;
+}
+
+.footer{
+    text-align:center;
+    margin-top:25px;
+    color:#64748b;
+    font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">
+        <h1>🙏 Calculadora Cristã</h1>
+        <p>Dízimo • Primícias • Oferta</p>
+    </div>
+
+    <div class="verse">
+        📖 <strong>Malquias 3:10</strong><br>
+        "Trazei todos os dízimos à casa do tesouro..."
+    </div>
+
+    <div class="form-group">
+        <label>💰 Renda Mensal (R$)</label>
+        <input type="number" id="renda" placeholder="Digite sua renda">
+    </div>
+
+    <div class="form-group">
+        <label>🌾 Primícias (%)</label>
+        <input type="number" id="primicias" placeholder="Ex: 5">
+    </div>
+
+    <div class="form-group">
+        <label>🙏 Oferta Voluntária (R$)</label>
+        <input type="number" id="oferta" placeholder="Ex: 50">
+    </div>
+
+    <button onclick="calcular()">
+        Calcular Contribuição
+    </button>
+
+    <div class="resultado" id="resultado">
+
+        <div class="item">
+            <span>💰 Dízimo (10%)</span>
+            <span id="dizimoValor"></span>
+        </div>
+
+        <div class="item">
+            <span>🌾 Primícias</span>
+            <span id="primiciasValor"></span>
+        </div>
+
+        <div class="item">
+            <span>🙏 Oferta</span>
+            <span id="ofertaValor"></span>
+        </div>
+
+        <div class="item total">
+            <span>Total</span>
+            <span id="totalValor"></span>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Desenvolvido para auxiliar membros e igrejas.
+    </div>
+
+</div>
+
+<script>
+
+function moeda(valor){
+    return valor.toLocaleString('pt-BR',{
+        style:'currency',
+        currency:'BRL'
+    });
+}
+
+function calcular(){
+
+    let renda =
+        parseFloat(document.getElementById("renda").value) || 0;
+
+    let primiciasPercentual =
+        parseFloat(document.getElementById("primicias").value) || 0;
+
+    let oferta =
+        parseFloat(document.getElementById("oferta").value) || 0;
+
+    let dizimo = renda * 0.10;
+
+    let primicias =
+        renda * (primiciasPercentual / 100);
+
+    let total =
+        dizimo + primicias + oferta;
+
+    document.getElementById("dizimoValor").innerText =
+        moeda(dizimo);
+
+    document.getElementById("primiciasValor").innerText =
+        moeda(primicias);
+
+    document.getElementById("ofertaValor").innerText =
+        moeda(oferta);
+
+    document.getElementById("totalValor").innerText =
+        moeda(total);
+
+    document.getElementById("resultado").style.display =
+        "block";
+}
+
+</script>
+
+</body>
+</html>
